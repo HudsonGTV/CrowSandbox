@@ -1,7 +1,6 @@
 #ifndef WEBPAGE_HPP
 #define WEBPAGE_HPP
 
-#include <iostream>
 #include "crow.h"
 
 #define ROOT_PREFIX "../"	// when ran from /build directory

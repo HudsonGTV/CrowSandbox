@@ -14,6 +14,10 @@ int main() {
 		return crow::response("{\"message\": \"ok\"}");
 	});
 
+	/**
+	 * Webpage/asset calls here
+	 */
+
 	// Allow assets to be fetched from server
 	CROW_ROUTE(app, "/assets/<path>")([](std::string path) {
 		return loadAsset(path);
