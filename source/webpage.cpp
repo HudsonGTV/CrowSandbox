@@ -102,7 +102,7 @@ crow::response loadAsset(std::string path) {
 	std::string fileExt = getFileExtension(path);
 
 	auto it = headerFileTypes.find(fileExt);
-	// Do not allow loading files not whitelisted in map
+	// Do not allow loading files not whitelisted in map (may update this later)
 	if(it == headerFileTypes.end())
 		return crow::response(ResponseCode::FORBIDDEN);
 

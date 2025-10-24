@@ -9,9 +9,14 @@ int main() {
 	 * API Calls here
 	 */
 
-	// Generic API routing
+	// Basic addition test
+	CROW_ROUTE(app, "/api/<int>/<int>")([](int i1, int i2) {
+		return crow::response("{\"answer\": \"" + std::to_string(i1 + i2) + "\"}");
+	});
+
+	// Generic API catch
 	CROW_ROUTE(app, "/api/<path>")([](std::string path) {
-		return crow::response("{\"message\": \"ok\"}");
+		return crow::response(R"({"message": "ok"})");
 	});
 
 	/**
