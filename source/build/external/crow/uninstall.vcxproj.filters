@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\git\CrowSandbox\source\build\CMakeFiles\02acbaa7f6be406cf928275ec60c6cb4\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\git\CrowSandbox\source\external\crow\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\git\CrowSandbox\source\build\external\crow\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E149570A-2430-3774-B6B8-5B841EA1C59F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

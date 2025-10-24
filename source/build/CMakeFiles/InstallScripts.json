@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/git/CrowSandbox/source/build/cmake_install.cmake",
+		"E:/git/CrowSandbox/source/build/external/crow/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

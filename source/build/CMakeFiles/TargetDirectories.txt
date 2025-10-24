@@ -1,0 +1,9 @@
+E:/git/CrowSandbox/source/build/CMakeFiles/crow_sandbox.dir
+E:/git/CrowSandbox/source/build/CMakeFiles/PACKAGE.dir
+E:/git/CrowSandbox/source/build/CMakeFiles/INSTALL.dir
+E:/git/CrowSandbox/source/build/CMakeFiles/ALL_BUILD.dir
+E:/git/CrowSandbox/source/build/CMakeFiles/ZERO_CHECK.dir
+E:/git/CrowSandbox/source/build/external/crow/CMakeFiles/uninstall.dir
+E:/git/CrowSandbox/source/build/external/crow/CMakeFiles/PACKAGE.dir
+E:/git/CrowSandbox/source/build/external/crow/CMakeFiles/INSTALL.dir
+E:/git/CrowSandbox/source/build/external/crow/CMakeFiles/ALL_BUILD.dir
