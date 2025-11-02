@@ -14,6 +14,16 @@ int main() {
 		return crow::response("{\"answer\": \"" + std::to_string(i1 + i2) + "\"}");
 	});
 
+	// Basic input data handling
+	CROW_ROUTE(app, "/api/echo").methods(
+		crow::HTTPMethod::POST
+	)([](const crow::request &req) {
+		crow::response res;
+		res.code = 200;
+		res.body = req.body;
+		return res;
+	});
+
 	// Generic API catch
 	CROW_ROUTE(app, "/api/<path>")([](std::string path) {
 		return crow::response(R"({"message": "ok"})");

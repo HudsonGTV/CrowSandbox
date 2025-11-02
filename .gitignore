@@ -1,0 +1,92 @@
+# Build directories
+/build/
+/source/build/
+*/build/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CTestTestfile.cmake
+install_manifest.txt
+CPackConfig.cmake
+CPackSourceConfig.cmake
+
+# Visual Studio and MSVC
+*.sln
+*.suo
+*.vcxproj*
+*.vcxproj.user
+*.vcxproj.filters
+*.vcxproj.*.user
+*.user
+*.VC.db
+*.pdb
+*.sdf
+*.opensdf
+ipch/
+*.obj
+*.lib
+*.dll
+*.exe
+*.ilk
+*.idb
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*~
+*.tmp
+*.temp
+*.swp
+
+# Compiled objects and libraries
+*.o
+*.lo
+*.la
+*.a
+*.so
+*.dylib
+*.out
+
+# Coverage, profiling
+coverage/
+*.gcno
+*.gcda
+*.gcov
+
+# Test/build outputs
+Testing/
+_test/
+
+# vcpkg artifacts (if you use vcpkg locally)
+externals/vcpkg/installed/
+externals/vcpkg/buildtrees/
+externals/vcpkg/packages/
+vcpkg_installed/
+
+# Node / Python common folders
+node_modules/
+venv/
+env/
+__pycache__/
+
+# Logs
+*.log
+
+# Keep track of submodules: don't ignore 'external' entirely if you commit submodules there
+# If you want to ignore local third-party sources that aren't submodules, add them explicitly.
+
+# End of .gitignore

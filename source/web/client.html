@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Client API Tester</title>
+	</head>
+	<body>
+		<div style="display: inline-block;">
+			<p>Sent</p>
+			<textarea cols="80" rows="40" id="json-payload">{
+	"name": "test",
+	"boolTest": true,
+	"intTest": 5,
+	"arrayTest": {
+		"foo": "bar",
+		"foobar": 5.3
+	},
+	"objArrTest": [
+		{
+			"title": "ExampleName",
+			"time": 432432432
+		},
+		{
+			"title": "ExampleName 2",
+			"time": 543543534
+		}
+	]
+}</textarea>
+		</div>
+		<div style="display: inline-block;">
+			<p>Received</p>
+			<textarea readonly cols="80" rows="40" id="data-response" autocomplete="off">...</textarea>
+		</div>
+		<br />
+		<label for="server-url">API Endpoint URL: </label>
+		<input id="server-url" type="url" value="http://localhost/api/echo">
+		<button onclick="jsonPacket()">Send JSON Packet</button>
+		<p>Status: <span id="packet-status"></span></p>
+		<script>
+			var e_statusBox = document.getElementById("packet-status");
+			var e_jsonResponse = document.getElementById("data-response");
+
+			const resErrorHandler = (statusMsg) => {
+
+				e_statusBox.innerHTML = `Error: ${statusMsg}`;
+				e_jsonResponse.innerHTML = "ERROR";
+
+				return "ERROR";
+
+			}
+
+			async function jsonPacket() {
+				
+				let e_jsonPayload = document.getElementById("json-payload");
+				
+				let e_url = document.getElementById("server-url");
+
+				// Send payload to server
+				try {
+					const res = await fetch(e_url.value, {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json"
+						},
+						body: e_jsonPayload.value
+					});
+
+					if(!res.ok) return resErrorHandler(res.status);
+
+					const data = await res.json();
+					e_jsonResponse.value = JSON.stringify(data, null, 2);
+
+					e_statusBox.innerHTML = "Success!";
+				} catch(err) {
+					e_jsonResponse.innerHTML = err.message;
+				}
+
+			}
+		</script>
+	</body>
+</html>
